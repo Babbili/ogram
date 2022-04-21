@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Carousel from '../components/Carousel'
 import styles from '../styles/Home.module.css'
@@ -13,13 +12,10 @@ export default function Home() {
         <title>Ogram, flexible Staffing and recruiting</title>
       </Head>
 
-      <main className={styles.main}>
-        <Header />
+      <div className={styles.main}>
         <Hero />
         <Carousel />
-      </main>
-
-      <footer className={styles.footer}></footer>
+      </div>
     </div>
   )
 }

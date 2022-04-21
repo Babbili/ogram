@@ -20,7 +20,9 @@
   --font-bold: 700;
 }
 *,::before,::after{
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html{
   scroll-behavior: smooth;
@@ -42,13 +44,22 @@ h1,h2,h3{
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
 }
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 a{
  text-decoration: none;
 }
-
+main {
+  display: grid;
+  place-items: center;
+}
 .container{
   max-width: 1140px;
   width: calc(100% - 3rem);
   margin: 0 1.5rem;
 }
-/* https://www.figma.com/file/ASjqUBm1kyl4Jh1L3JGPw1/React-Web-Test?node-id=0%3A1 */
