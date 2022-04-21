@@ -7,5 +7,108 @@
 
 /* === Header === */
 .header {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* row-gap: 1rem; */
+  height: 100%;
+  padding: .5rem 0;
+  z-index: 10;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: .3rem;
+  z-index: 15;
+}
+.logo :last-child {
+  transform: translateY(1px);
+}
+.nav__menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 100vw;
+  background-color: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 6rem 0;
+}
+.show__menu {
+  top: 0;
+}
+.nav__menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1rem;
+}
+.nav__menu__list :last-child {
+  margin: 1rem auto;
+}
+.nav__menu__list__item {
+  cursor: pointer;
+  font-family: var(--title-font);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+#indust {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.button {
+  padding: .8rem 1.2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  row-gap: .5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  z-index: 15;
+}
+.nav__btn:hover {
+  cursor: pointer;
+}
+.nav__btn__up {
+  width: 1.8rem;
+  height: .11rem;
+  background-color: var(--text-color);
+  text-align: right;
+  opacity: 1;
+  z-index: 15;
+  transition: .4s;
+}
+.nav__btn__bottom {
+  width: 1rem;
+  height: .11rem;
+  background-color: var(--text-color);
+  text-align: right;
+  opacity: 1;
+  z-index: 15;
+  transition: .4s;
+}
+.toggle__up {
+  width: 1.5rem;
+  transform: translate(.2rem,.2rem) rotate(.125turn);
+  transition: .4s;
+}
+.toggle__bottom {
+  width: 1.5rem;
+  transform: translate(.2rem, -.4rem) rotate(-.125turn);
+  transition: .4s;
 }

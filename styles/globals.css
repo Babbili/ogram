@@ -63,3 +63,13 @@ main {
   width: calc(100% - 3rem);
   margin: 0 1.5rem;
 }
+#active__link {
+  color: var(--primary-color);
+}
+.button {
+  padding: .8rem 1.2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+}
