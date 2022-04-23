@@ -61,6 +61,7 @@
   cursor: pointer;
   font-family: var(--title-font);
   font-weight: var(--font-semi-bold);
+  font-size: var(--h2-font-size);
   color: var(--title-color);
 }
 #indust {
@@ -92,6 +93,9 @@
   }
   .nav__menu__list :last-child {
     margin: auto .2rem;
+  }
+  .nav__menu__list__item {
+    font-size: var(--normal-font-size);
   }
   .button {
     padding: .4rem 1rem;
