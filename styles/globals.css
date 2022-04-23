@@ -54,6 +54,11 @@ img {
 a{
  text-decoration: none;
 }
+#__next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 main {
   display: grid;
   place-items: center;
@@ -63,6 +68,7 @@ main {
   width: calc(100% - 3rem);
   margin: 0 1.5rem;
 }
+
 #active__link {
   color: var(--primary-color);
 }
@@ -74,12 +80,13 @@ main {
   cursor: pointer;
 }
 
+/* ==== nav menu ===== */
 .nav__menu {
   position: fixed;
-  top: -100%;
+  top: -130%;
   left: 0;
   right: 0;
-  height: 100vw;
+  height: 100vh;
   background-color: var(--body-color);
   display: flex;
   flex-direction: column;
@@ -105,7 +112,7 @@ main {
 .nav__btn__up {
   width: 1.8rem;
   height: .11rem;
-  background-color: var(--text-color);
+  background-color: #fff;
   text-align: right;
   opacity: 1;
   z-index: 15;
@@ -114,7 +121,7 @@ main {
 .nav__btn__bottom {
   width: 1rem;
   height: .11rem;
-  background-color: var(--text-color);
+  background-color: #fff;
   text-align: right;
   opacity: 1;
   z-index: 15;
@@ -128,11 +135,13 @@ main {
 .toggle__up {
   width: 1.5rem;
   transform: translate(.2rem,.2rem) rotate(.125turn);
+  background-color: #000;
   transition: all .4s;
 }
 .toggle__bottom {
   width: 1.5rem;
   transform: translate(.2rem, -.4rem) rotate(-.125turn);
+  background-color: #000;
   transition: all .4s;
 }
 @media screen and (min-width: 769px) {
