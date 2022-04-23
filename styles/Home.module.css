@@ -228,6 +228,8 @@
 }
 .carousel__wrap > :first-child a {
   color: #fff;
+}
+.carousel__wrap > :first-child a svg {
   fill: #fff;
 }
 
@@ -239,4 +241,8 @@
   align-items: center;
   column-gap: .4rem;
   font-weight: var(--font-semi-bold);
+  color: var(--primary-color);
+}
+.card__cta svg {
+  fill: var(--primary-color);
 }
