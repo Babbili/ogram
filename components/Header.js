@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 function Header() {
+
+    const navBtn = useRef()
+    const navBtnUp = useRef()
+    const navBtnBottom = useRef()
+    const navMenu = useRef()
+
+    function navBtnClick() {
+        navMenu.current.classList.toggle('show__menu')
+        navBtnUp.current.classList.toggle('toggle__up')
+        navBtnBottom.current.classList.toggle('toggle__bottom')
+    }
+
+
     return (
         <header className={`${styles.header} container`}>
             <div className={styles.logo}>
@@ -17,12 +30,12 @@ function Header() {
                     <path d="M6.99868 4.72763C6.85577 5.27008 6.59994 5.77611 6.24795 6.21237C5.89597 6.64863 5.45584 7.00524 4.95648 7.25883C4.46793 7.46981 3.93703 7.56389 3.40592 7.53355C2.8748 7.50321 2.35807 7.34931 1.8966 7.08407C1.43513 6.81884 1.04164 6.44954 0.747306 6.00543C0.45297 5.56132 0.265855 5.05459 0.200836 4.52544C0.0720475 3.67872 0.262007 2.81432 0.733809 2.10017C1.20561 1.38602 1.92557 0.873151 2.75365 0.661377C3.18422 0.551226 3.63224 0.527276 4.07206 0.590847C4.51189 0.654418 4.93487 0.804281 5.31683 1.03187C5.6988 1.25947 6.03223 1.56036 6.29806 1.91725C6.56388 2.27413 6.75691 2.67998 6.86603 3.1117C6.90256 3.20527 6.94747 3.29538 7.00024 3.38082V4.72763H6.99868Z" fill="#FCB35C" />
                 </svg>
             </div>
-            <nav className={styles.nav__menu}>
+            <nav className='nav__menu' ref={navMenu}>
                 <ul className={styles.nav__menu__list}>
                     <li>
                         <Link href={'/'}>
                             <a className={styles.nav__menu__list__item} id={styles.indust}>
-                                Industries<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--title-color)"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                                Industries<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"var(--title-color)"}><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
                             </a>
                         </Link>
                     </li>
@@ -32,9 +45,9 @@ function Header() {
                     <li><Link href={'/'}><a className={`${styles.nav__menu__list__item} ${styles.button}`}>Get Started</a></Link></li>
                 </ul>
             </nav>
-            <div className={styles.nav__btn}>
-                <div className={styles.nav__btn__up}></div>
-                <div className={styles.nav__btn__bottom}></div>
+            <div className='nav__btn' ref={navBtn} onClick={()=> navBtnClick()}>
+                <div className='nav__btn__up' ref={navBtnUp}></div>
+                <div className='nav__btn__bottom' ref={navBtnBottom}></div>
             </div>
         </header>
     )
