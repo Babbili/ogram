@@ -1,9 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 function Header() {
-
+    
+    const [industFill, setIndustFill] = useState('#fff')
     const navBtn = useRef()
     const navBtnUp = useRef()
     const navBtnBottom = useRef()
@@ -14,6 +15,10 @@ function Header() {
         navBtnUp.current.classList.toggle('toggle__up')
         navBtnBottom.current.classList.toggle('toggle__bottom')
     }
+
+    useEffect(()=> {
+        window.innerWidth < 769 ? setIndustFill('#000') : setIndustFill('#fff')
+    }, [])
 
 
     return (
@@ -35,7 +40,7 @@ function Header() {
                     <li>
                         <Link href={'/'}>
                             <a className={styles.nav__menu__list__item} id={styles.indust}>
-                                Industries<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={"var(--title-color)"}><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                                Industries<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={industFill}><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
                             </a>
                         </Link>
                     </li>

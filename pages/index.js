@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Showcase from '../components/Showcase'
 import Hero from '../components/Hero'
 import Carousel from '../components/Carousel'
 import styles from '../styles/Home.module.css'
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
 
       <div className={styles.main}>
+        <Showcase />
         <Hero />
         <Carousel />
       </div>
