@@ -67,6 +67,7 @@ main {
   max-width: 1140px;
   width: calc(100% - 3rem);
   margin: 0 1.5rem;
+  overflow-x: hidden;
 }
 
 #active__link {
@@ -161,4 +162,7 @@ main {
   .nav__btn, .nav__btn__up, .nav__btn__bottom {
     display: none;
   }
+}
+footer {
+  padding: 2rem 0;
 }
