@@ -151,9 +151,13 @@
 .clients {
   width: 100%;
   overflow-x: scroll;
+  scrollbar-width: 0;
 }
 .clients svg {
   overflow-x: scroll;
+}
+.clients::-webkit-scrollbar {
+  display: none;
 }
 @media screen and (min-width: 769px) {
   .hero {
