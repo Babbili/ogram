@@ -37,17 +37,17 @@ function Header() {
             </div>
             <nav className='nav__menu' ref={navMenu}>
                 <ul className={styles.nav__menu__list}>
-                    <li>
+                    <li className={styles.nav__menu__list__item}>
                         <Link href={'/'}>
                             <a className={styles.nav__menu__list__item} id={styles.indust}>
                                 Industries<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={industFill}><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
                             </a>
                         </Link>
                     </li>
-                    <li><Link href={'/'}><a className={styles.nav__menu__list__item} id="active__link">Hire</a></Link></li>
-                    <li><Link href={'/'}><a className={styles.nav__menu__list__item}>Find Work</a></Link></li>
-                    <li><Link href={'/'}><a className={styles.nav__menu__list__item}>Help</a></Link></li>
-                    <li><Link href={'/'}><a className={`${styles.nav__menu__list__item} ${styles.button}`}>Get Started</a></Link></li>
+                    <li className={styles.nav__menu__list__item}><Link href={'/'}><a className={styles.nav__menu__list__item} id="active__link">Hire</a></Link></li>
+                    <li className={styles.nav__menu__list__item}><Link href={'/'}><a className={styles.nav__menu__list__item}>Find Work</a></Link></li>
+                    <li className={styles.nav__menu__list__item}><Link href={'/'}><a className={styles.nav__menu__list__item}>Help</a></Link></li>
+                    <li className={styles.nav__menu__list__item}><Link href={'/'}><a className={`${styles.nav__menu__list__item} ${styles.button}`}>Get Started</a></Link></li>
                 </ul>
             </nav>
             <div className='nav__btn' ref={navBtn} onClick={()=> navBtnClick()}>
